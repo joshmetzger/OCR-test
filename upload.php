@@ -9,6 +9,8 @@
         echo "<h3>Image Uploaded Successfully</h3>";
         echo "<img width='800' height='600' src='images/$file_name'>";
 
+        // try shade, other compression, tiff convert, some other image editing, planing if possible...
+        // shell_exec('')
         shell_exec('/usr/local/bin/tesseract images/'.$file_name.' output');
 
         echo "<br><h6>Text from proccessed image: </h6>";
