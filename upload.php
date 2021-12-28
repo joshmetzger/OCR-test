@@ -12,6 +12,7 @@
         $img = new Imagick($_SERVER['DOCUMENT_ROOT']."/OCR_test/images/$file_name");
         // $img->scaleImage(3000, 3000, true);
         $img->adaptiveSharpenImage(0, 8);
+        $img->contrastImage(5);
         $img->writeImage($_SERVER['DOCUMENT_ROOT']."/OCR_test/processed_images/processed_$file_name");
 
         echo "<img width='800' height='600' src='processed_images/processed_$file_name'>";
